@@ -1,13 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family= Poppins :wght@400;700 & display=swap');
-    body {
-        margin:0px; /*maargem externa*/
-        padding:0px;/*margem interna*/
+:root{
+    --azul-dnc: #0c70f2;
+    --preto-dnc:#303030;
+    --cinza-hover:#c9c9c9;
+    --fonte-padrao:'inter'
+} 
+body {
+    background: linear-gradient(180deg, rgba(12, 112, 242, 0.5) 19.91%, rgba(12, 112, 242, 0) 24.84%), #303030;
+    background-repeat: no-repeat;
+    margin:0px; /*maargem externa*/
+    padding:0px;/*margem interna*/
+
+    /**/
+    /*background: linear-gradient(180deg, rgba(12, 112, 242, 0.5) 19.91%, rgba(12, 112, 242, 0) 24.84%), #303030;*/
     }
+        
    #principal {
     width: 100%;
     height: 100px;
     border:1px solid black;
-    background-color: #303030;
+    background-color:var(--preto-dnc);
 
     display:flex;
     justify-content: space-between;
@@ -15,7 +27,7 @@
     border-bottom: 1px solid #bababa;        
    }
    #principal div a {
-    font-family: 'inter';
+    font-family:var(--fonte-padrao);
     font-style: normal;
     font-size:25px;
     font-weight: 600;
@@ -25,7 +37,7 @@
    
    }
    #principal div a:hover {
-    color: grey;
+    color:var(--cinza-hover);
     /*Faz com que ao passar o mouse em cima o irem muda de cor.Chmado de pseudo clase*/
    }
     #menu {
@@ -38,13 +50,13 @@
     }
     #principal button {
         margin-right: 5%;
-        background-color: #0C70F2;
+        background-color:var(--azul-dnc);
         border: 0px;
 
         height: 40PX;
         width: 80px;
 
-        font-family: 'inter';
+        font-family:var(--fonte-padrao)
         font-size:20px;
         font-weight: 600;
         color:white;
@@ -55,3 +67,100 @@
         /*Cursor POINTER faz aparecer a mãozinha em cima do botão*/
         /*box shadow seria 3pixels de largura e 2pixels de tamanho ja o 4pixel seria a força do desfoque, a cor é a cor da sombra gerada*/
     }
+
+    /*Sessão principal do site*/
+
+    section {
+        display:flex;
+        flex-direction: column; /*ao inves das divs ficarem lado a lado, elas ficam uma a baixo da outra como uma coluna.*/
+        align-items: center;
+
+        margin-top: 100px;
+        margin-bottom: 100px;
+        }
+        header {
+            color:white;
+            font-family: var(--fonte-padrao);
+        }
+        header h1 {
+            text-transform: uppercase;
+            font-size:80px;
+            font-weight: 750;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        header h2{
+            margin-bottom: 100px;
+            color:white;
+            text-align:center;
+            font-family: var(--fonte-padrao)
+            font-size:40px;
+            font-weight:700
+            }
+            header .invert {
+                background-color: #1F1F1F;
+                font-weight: bold;
+                padding: 5px;
+            }
+            form{
+                color:white;
+                width: 500px;
+                font-family:var(--fonte-padrao)
+                font-ize:30px;
+                font-weight:600;
+                
+            }
+            .formGroup {
+                display:flex;
+                flex-direction: column;
+                /*Flex direction column para direcionar a label acima do input sem prescisar usar a tag br*/
+                margin-top: 13px;
+            }
+            form input {
+                background-color: rgba(255, 255 , 255,0.9 );
+                border-radius: 10px;
+                height: 30px;
+                font-size: 20px;
+                line-height: 24px;
+                border: 0px;
+                padding:10px
+                             
+            }
+            form input::placeholder {
+                color:rgb(57,57,57,0.5);
+                            
+            }
+            form label {
+                margin: 10px 0px 10px 0px;
+            }
+            #cdt {
+                background-color: #0c70f2;
+                color: #FFFFFF;
+                
+                margin-top: 25px;
+            }
+            .checkbox-itens label {
+                font-size: 21px;
+            }
+            .checkbox-itens {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+            input[type="checkbox"]{
+                transform: scale(1.6);
+            }
+            input[type="submit"]{
+                background-color: rgba(12,112,242,0.9);
+                width: 100%;
+                height: 55px;
+                font-size: 32px;
+                color: white;
+                cursor: pointer;
+                box-shadow: 0px 6px 4px rgba(12, 112, 242, 0.25);
+                margin-top: 100px
+                
+
+
+            }
+
