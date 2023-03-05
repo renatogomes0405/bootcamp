@@ -280,9 +280,15 @@ body {
                 font-size: 20px; 
                }
                .checkbox-itens{
-                font: size 10px;px;
+                font-size:15px;             
                }
-               
+               /*Footer*/
+               footer .linha1 {
+                flex-direction: column;
+            }
+            .endereço {
+                width: 100%;
+            }
             }
               
 
